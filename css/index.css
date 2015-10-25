@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Kalam);
+
+
+*{
+  padding-top:15;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+body{
+
+  background-color:#f0f0f0;
+  font-family:helvetica;
+}
+.input{
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+h1{
+  font-family: 'Kalam', cursive;
+}
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
+  padding: 0;
+  width: 30%;
+  height: 30%;
+}
+.images{
+  padding-top: 15px;
+  background-color: white;
+  border-radius:5px;
+}
+.image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+.image img{
+  width: 150px;
+}
+.form{
+  float:left;
+  height:86%;
+  width:100%;
+  box-sizing:border-box;
+  padding-top: 30px;
+  background-color: white;
+  border-radius:5px;
+  margin-bottom: 30px;
+}
+
+.textbox{
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+}
+
+.textbox:focus{
+  outline:none;
+   border:rgba(24,149,215,1) 2px solid;
+   color:rgba(24,149,215,1);
+}
+
+.button{
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+  background:#90c843;
+  color:#FFF;
+  font-weight:bold;
+  font-size: 12pt;
+  transition:background .4s;
+  cursor:pointer;
+}
+
+.button:hover{
+  background:#80b438;
+}
