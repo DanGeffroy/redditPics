@@ -4,6 +4,8 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>Reddit pics browser</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="js/index.js"></script>
   </head>
   <body>
   <div class="container">
@@ -12,119 +14,77 @@
         <img src="img/Reddit-alien.png" alt="Reddit logo" id="logo">
         <h1>Reddit pics browser</h1>
         <input type="text" placeholder="What do you wanna see?" class="textbox" />
-        <input type="button" value="Next" class="button" />
+        <div class="dropdown">
+      <p>Where you wanna search? </p>
+
+        <select>
+         <option> /Hot</option>
+         <option> /New</option>
+         <option> /Rising</option>
+         <option> /Controversial</option>
+         <option> /Top</option>
+         <option> /Gilded</option>
+         <option> /Promoted</option>
+       </select>
+      </div> <!-- DropDown -->
+        <input type="button" value="GO !" class="button"  id="button"/>
       </form>
     </div>
-    <table style="width:100%" class="images">
-      <tr>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/eBTudCo.jpg">
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/x2NBedj.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-        <td>
-          <div  class="image">
-            <img src="http://i.imgur.com/Nn1Vcnw.jpg">
-          </div>
-        </td>
-      </tr>
-    </table>
+    <a name="anchor" class="anchor"></a>
+
+    <div id="images" class="images">
+       <div class="image" id="img1">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img2">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img3">
+         <img src="http://i.imgur.com/eqjKYy6.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img4">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img5">
+         <img src="http://i.imgur.com/JyfeHb4.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img6">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img7">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img8">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img9">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img10">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img11">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img12">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img13">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img14">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img15">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+       <div class="image" id="img16">
+         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
+       </div>
+     </div>
+
+
+
   </div>
 </body>
 </html>

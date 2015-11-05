@@ -1,56 +1,56 @@
 @import url(https://fonts.googleapis.com/css?family=Kalam);
 
 
-*{
-  padding-top:15;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 10px;
-}
+
 
 body{
 
   background-color:#f0f0f0;
   font-family:helvetica;
 }
-.input{
-  margin-right: 30%;
-  margin-left: 30%;
-}
 
 h1{
+  padding-top: 30px;
   font-family: 'Kalam', cursive;
 }
 #logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto ;
-  padding: 0;
-  width: 30%;
-  height: 30%;
+  width: 150px;
+  float:left;
+}
+
+.input{
+  padding-top: 10px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 .images{
   padding-top: 15px;
   background-color: white;
   border-radius:5px;
-}
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}/*
+div{
+  border: 1px solid black ;
+}*/
+
 .image {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     overflow: hidden;
+    margin : auto;
+    display: inline-block;
 }
 .image img{
-  width: 150px;
+  width: 220px;
 }
 .form{
-  float:left;
-  height:86%;
-  width:100%;
-  box-sizing:border-box;
-  padding-top: 30px;
+  padding: 25px;
+  margin-bottom: 20px;
   background-color: white;
   border-radius:5px;
-  margin-bottom: 30px;
 }
 
 .textbox{
@@ -58,33 +58,77 @@ h1{
   width:100%;
   border-radius:3px;
   border:rgba(0,0,0,.3) 2px solid;
-  box-sizing:border-box;
-  padding:10px;
-  margin-bottom:30px;
 }
 
 .textbox:focus{
   outline:none;
-   border:rgba(24,149,215,1) 2px solid;
-   color:rgba(24,149,215,1);
+   border:#1895D7 2px solid;
+   color:#1895D7;
 }
 
 .button{
   height:50px;
   width:100%;
   border-radius:3px;
-  border:rgba(0,0,0,.3) 0px solid;
-  box-sizing:border-box;
-  padding:10px;
-  margin-bottom:30px;
-  background:#90c843;
+  border:rgba(24,149,215,1) 0px solid;
+
+  background:rgba(24,149,215,1);
   color:#FFF;
   font-weight:bold;
   font-size: 12pt;
   transition:background .4s;
   cursor:pointer;
+
 }
 
 .button:hover{
-  background:#80b438;
+  background:#0875AE;
+}
+.dropdown p {
+  padding-top:0px;
+	display: inline-block;
+	font-weight: bold;
+  font-size: 17px;
+}
+.dropdown select {
+
+      border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: url('dropdown_arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 82px 7px;  /*Position of the background-image*/
+      width: 100px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+
+      /*My custom style for fonts*/
+
+      color: #1455a2;
+}
+
+@media (max-width: 500px) {
+  .input{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .image {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      margin : auto;
+      display: inline-block;
+  }
+  .image img{
+    width: 150px;
+  }
+  h1{
+    padding-top: 0px;
+    font-family: 'Kalam', cursive;
+  }
+  #logo{
+    width: 75px;
+    float:left;
+  }
+
 }
