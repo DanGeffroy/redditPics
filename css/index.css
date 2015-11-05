@@ -17,8 +17,13 @@ h1{
 
 .input{
   padding-top: 10px;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: white;
+  border-radius:5px;
+
 }
 .images{
   padding-top: 15px;
@@ -54,8 +59,7 @@ div{
 .form{
   padding: 25px;
   margin-bottom: 20px;
-  background-color: white;
-  border-radius:5px;
+
 }
 
 .textbox{
@@ -141,17 +145,20 @@ font-size: 15px;
 
 @media (max-width: 500px) {
   .input{
+    margin-left: 1%;
+    margin-right: 1%;
     padding-left: 1%;
     padding-right: 1%;
-    padding-top: 0px;
-
-    z-index: 3;
+    padding-top: 1%;
+    position:fixed;
+      z-index: 3;
   }
   .images{
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-top: 250px;
   }
-
+  form{
+    margin-bottom: 0px;
+  }
   .image {
       width: 150px;
       height: 150px;
@@ -169,18 +176,30 @@ font-size: 15px;
   }
   #logo{
     width: 60px;
-    float:left;
+
   }
 
   .textbox{
     height:30px;
+    width: auto;
+    float: left;
   }
   .button{
+
     height:30px;
+    width: auto;
+    border : 2px;
     font-size: 10pt;
+
   }
   .button:hover{
-  background-size: 30%;
+  background-size: 200%;
 
+  }
+  .dropdown{
+    float: none;
+  }
+  .resol{
+    margin-left: 0px;
   }
 }
