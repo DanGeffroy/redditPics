@@ -42,9 +42,15 @@ div{
     overflow: hidden;
     margin : auto;
     display: inline-block;
+    position:relative
 }
+
 .image img{
   width: 220px;
+  transition:width .4s;
+}
+.image img:hover{
+  width: 104%;
 }
 .form{
   padding: 25px;
@@ -83,12 +89,35 @@ div{
 
 .button:hover{
   background:#0875AE;
+  background: url("../img/fuse.png");
+  background-repeat: no-repeat;
+  background-position: center;
+    border:#1895D7 2px solid;
+
+}
+.dropdown{
+  float: left;
 }
 .dropdown p {
   padding-top:0px;
 	display: inline-block;
 	font-weight: bold;
   font-size: 17px;
+}
+span{
+
+  position: absolute;
+background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
+color: #FFF;
+left: 0px;
+width: 100%;
+bottom: 0px;
+padding: 5px 5px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+box-sizing: border-box;
+font-size: 15px;
 }
 .dropdown select {
 
