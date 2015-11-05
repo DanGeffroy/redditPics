@@ -1,8 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Kalam);
 
-
-
-
 body{
 
   background-color:#f0f0f0;
@@ -28,8 +25,10 @@ h1{
   background-color: white;
   border-radius:5px;
   text-align: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: 7%;
+  margin-right: 7%;
+  padding-left: 5px;
+  padding-right :5px;
 
 }/*
 div{
@@ -98,6 +97,9 @@ div{
 .dropdown{
   float: left;
 }
+.resol{
+  margin-left: 20px;
+}
 .dropdown p {
   padding-top:0px;
 	display: inline-block;
@@ -120,23 +122,32 @@ box-sizing: border-box;
 font-size: 15px;
 }
 .dropdown select {
-
-      border: 0 !important;  /*Removes border*/
+        border:#1895D7 1px solid;
+    /*  border: 0 !important; */ /*Removes border*/
       -webkit-appearance: none;  /*Removes default chrome and safari style*/
       -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('dropdown_arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 82px 7px;  /*Position of the background-image*/
+      background: url('../img/arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 83px 4px;  /*Position of the background-image*/
       width: 100px; /*Width of select dropdown to give space for arrow image*/
       text-indent: 0.01px; /* Removes default arrow from firefox*/
       text-overflow: "";  /*Removes default arrow from firefox*/
 
       /*My custom style for fonts*/
-
       color: #1455a2;
+}
+.dropdown select:hover{
+
 }
 
 @media (max-width: 500px) {
   .input{
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0px;
+
+    z-index: 3;
+  }
+  .images{
     padding-left: 1%;
     padding-right: 1%;
   }
@@ -154,10 +165,22 @@ font-size: 15px;
   h1{
     padding-top: 0px;
     font-family: 'Kalam', cursive;
+    font-size: 120%;
   }
   #logo{
-    width: 75px;
+    width: 60px;
     float:left;
   }
 
+  .textbox{
+    height:30px;
+  }
+  .button{
+    height:30px;
+    font-size: 10pt;
+  }
+  .button:hover{
+  background-size: 30%;
+
+  }
 }
