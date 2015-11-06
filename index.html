@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>Reddit pics browser</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/index.js"></script>
   </head>
   <body>
@@ -17,20 +17,20 @@
         <div class="dropdown filter">
       <p>filter : </p>
 
-        <select>
-         <option> Hot</option>
-         <option> New</option>
-         <option> Rising</option>
-         <option> Controversial</option>
-         <option> Top</option>
-         <option> Gilded</option>
-         <option> Promoted</option>
+        <select id="filter">
+         <option value="hot"> hot</option>
+         <option value="new"> new</option>
+         <option value="rising"> rising</option>
+         <option value="controversial"> controversial</option>
+         <option value="top"> top</option>
+         <option value="gilded"> gilded</option>
+         <option value="promoted"> promoted</option>
        </select>
       </div> <!-- DropDown -->
       <div class="dropdown resol">
     <p>size : </p>
 
-      <select>
+      <select id="resolutions">
        <option> 300px</option>
        <option> 200px</option>
        <option> 500px</option>
@@ -42,71 +42,8 @@
     <a name="anchor" class="anchor"></a>
 
     <div id="images" class="images">
-       <div class="image" id="img1">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une belle description</span>
-       </div>
-       <div class="image" id="img2">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img3">
-         <img src="http://i.imgur.com/eqjKYy6.jpg" alt="Titre image"/>
-        <span>Une autre autre belle description</span>
-       </div>
-       <div class="image" id="img4">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img5">
-         <img src="http://i.imgur.com/JyfeHb4.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img6">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img7">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img8">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img9">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img10">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img11">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img12">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img13">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img14">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img15">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-       <div class="image" id="img16">
-         <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-         <span>Une autre belle description</span>
-       </div>
-     </div>
+
+    </div>
 
 
 

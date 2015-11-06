@@ -26,6 +26,7 @@ h1{
 
 }
 .images{
+  visibility: hidden;
   padding-top: 15px;
   background-color: white;
   border-radius:5px;
@@ -44,7 +45,7 @@ div{
     width: 220px;
     height: 220px;
     overflow: hidden;
-    margin : auto;
+    margin : 2px;
     display: inline-block;
     position:relative
 }
