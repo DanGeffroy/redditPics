@@ -42,8 +42,8 @@ div{
 }*/
 
 .image {
-    width: 220px;
-    height: 220px;
+    width: 216px;
+    height: 162px;
     overflow: hidden;
     margin : 2px;
     display: inline-block;
@@ -51,7 +51,7 @@ div{
 }
 
 .image img{
-  width: 220px;
+  width: 216px;
   transition:width .4s;
 }
 .image img:hover{
