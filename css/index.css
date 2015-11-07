@@ -36,26 +36,36 @@ h1{
   padding-left: 5px;
   padding-right :5px;
 
+  -moz-column-count:5;
+-moz-column-gap: 5%;
+-moz-column-width: 50%;
+-webkit-column-count:5;
+-webkit-column-gap: 5%;
+-webkit-column-width: 50%;
+column-count: 5;
+column-gap: 5%;
+column-width: 50%;
+
 }/*
 div{
   border: 1px solid black ;
 }*/
 
 .image {
-    width: 216px;
-    height: 162px;
+  /*  width: 216px;*/
+  /*  height: 162px;*/
     overflow: hidden;
     margin : 2px;
-    display: inline-block;
+    /*display: inline-block;*/
     position:relative
 }
 
 .image img{
-  width: 216px;
+/*  width: 216px;*/
   transition:width .4s;
 }
 .image img:hover{
-  width: 104%;
+  /*width: 104%;*/
 }
 .form{
   padding: 25px;
@@ -113,7 +123,7 @@ div{
 }
 span{
 
-  position: absolute;
+/*  position: absolute;*/
 background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
 color: #FFF;
 left: 0px;

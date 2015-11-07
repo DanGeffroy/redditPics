@@ -14,13 +14,13 @@
       <form class="form">
         <img src="img/Reddit-alien.png" alt="Reddit logo" id="logo">
         <h1>Reddit pics browser</h1>
-        <input type="text" placeholder="What do you wanna see?" class="textbox" />
+        <input type="text" placeholder="What do you wanna see?" class="textbox" id="subreddit" />
         <div class="dropdown filter">
       <p>filter : </p>
 
         <select id="filter">
          <option value="hot"> hot</option>
-         <option value="new"> new</option>
+         <option value="new" selected="selected"> new</option>
          <option value="rising"> rising</option>
          <option value="controversial"> controversial</option>
          <option value="top"> top</option>
@@ -34,7 +34,7 @@
       <select id="resolutions">
        <option value="108">108x81</option>
        <option value="216">216x162</option>
-       <option value="320">320x240</option>
+       <option value="320" selected="selected">320x240</option>
        <option value="640">640x480</option>
        <option value="960">960x720</option>
        <option value="1080">1080x810</option>
