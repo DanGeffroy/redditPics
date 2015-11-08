@@ -49,7 +49,7 @@ function searchAndPrint(filter,resolutions, subreddit){
 }
 function printPics(data,resolutions){
   option = resolutions;
-  cssAdaptator();
+  cssAdaptator(resolutions);
   for(i = 0;i<100;i++){
   /*  console.log("<div class='image' id='img1'><img src='"+data.data.children[i].data.preview.images[0].resolutions[1]+"' alt='"+data.data.children[i].data.title+"'/><span>"+data.data.children[i].data.title+"</span></div>");*/
   if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
@@ -58,6 +58,39 @@ function printPics(data,resolutions){
   }
 };
 
-function cssAdaptator(){
+function cssAdaptator(resolutions){
   $(".images").css("visibility", "visible");
+  value ="5";
+  if(resolutions==="0"){
+    value = 9;
+  }
+
+  else if(resolutions==="1"){
+    value = 6;
+  }
+  else if(resolutions==="2"){
+    value = 5;
+  }
+  else if(resolutions==="3"){
+    value = 4;
+  }
+  else if(resolutions==="4"){
+    value = 3;
+  }
+  else if(resolutions==="5"){
+    value = 2;
+  }
+  else if(resolutions==="6"){
+    value = 1;
+  }
+    $(".images").css("-moz-column-count:", value);
+    $(".images").css("-moz-column-gap", value +"%");
+    $(".images").css("-moz-column-width", value +"0%");
+    $(".images").css("-webkit-column-count", value);
+    $(".images").css("-webkit-column-gap", value +"%");
+    $(".images").css("-webkit-column-width", value +"0%");
+    $(".images").css("column-count", value);
+    $(".images").css("column-gap", value +"%");
+    $(".images").css("column-width", value +"0%");
+
 }
