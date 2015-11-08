@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Kalam);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 body{
 
-  background-color:#f0f0f0;
+  background-color:#e3e3e3;
   font-family:helvetica;
 }
 
@@ -28,7 +29,6 @@ h1{
 .images{
   visibility: hidden;
   padding-top: 15px;
-  background-color: white;
   border-radius:5px;
   text-align: center;
   margin-left: 7%;
@@ -46,6 +46,7 @@ column-count: 5;
 column-gap: 5%;
 column-width: 50%;
 
+  display: block;
 }/*
 div{
   border: 1px solid black ;
@@ -54,19 +55,30 @@ div{
 .image {
   /*  width: 216px;*/
   /*  height: 162px;*/
-    overflow: hidden;
-    margin : 2px;
+  /*  */
+width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+    background-color: white;
     /*display: inline-block;*/
-    position:relative
+  /*  position:relative*/
+
+
+}
+.imgcropper{
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
 }
 
-.image img{
-/*  width: 216px;*/
-  transition:width .4s;
+.imgcropper img{
+  width: 100%;
 }
-.image img:hover{
-  /*width: 104%;*/
-}
+
 .form{
   padding: 25px;
   margin-bottom: 20px;
@@ -122,19 +134,9 @@ div{
   font-size: 17px;
 }
 span{
-
-/*  position: absolute;*/
-background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
-color: #FFF;
-left: 0px;
-width: 100%;
-bottom: 0px;
-padding: 5px 5px;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-box-sizing: border-box;
-font-size: 15px;
+color: black;
+font-family: 'Amatic SC', cursive;
+font-size: 25px;
 }
 .dropdown select {
         border:#1895D7 1px solid;

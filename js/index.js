@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  searchAndPrint("hot","320","pics");
+  searchAndPrint("hot","2","pics");
 
 
 
@@ -27,7 +27,7 @@ function scrollToAnchor(aid){
 };
 function searchAndPrint(filter,resolutions, subreddit){
   if(subreddit !=""){
-      redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=30";
+      redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
   }
   else{
       redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=30";
@@ -35,75 +35,29 @@ function searchAndPrint(filter,resolutions, subreddit){
   $.ajax({
     url: redditUrl,
     dataType: "json",
+    error: function(){
+      console.log("fail");
+        $("#subreddit").val("This subReddit doesn't exist :S");
+    },
     jsonp: 'jsonp',
     success: function(data) {
     console.log(data);
 
     printPics(data,resolutions);
-    }
+  }
   });
 }
 function printPics(data,resolutions){
-  option = cssAdaptator(resolutions);
-  for(i = 0;i<30;i++){
+  option = resolutions;
+  cssAdaptator();
+  for(i = 0;i<100;i++){
   /*  console.log("<div class='image' id='img1'><img src='"+data.data.children[i].data.preview.images[0].resolutions[1]+"' alt='"+data.data.children[i].data.title+"'/><span>"+data.data.children[i].data.title+"</span></div>");*/
   if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
-    $(".images").append("<div class='image' id='img" + i+"'><img src='"+data.data.children[i].data.preview.images[0].resolutions[option].url+"' alt='"+data.data.children[i].data.title+"'/><span>"+data.data.children[i].data.title+"</span></div>");
+    $(".images").append("<div class='image' id='img" + i+"'><div class='imgcropper'><a href='"+data.data.children[i].data.preview.images[0].resolutions[option].url+"'><img src='"+data.data.children[i].data.preview.images[0].resolutions[option].url+"' alt='"+data.data.children[i].data.title+"'/></a></div><span>"+data.data.children[i].data.title+"</span></div>");
   }
   }
 };
 
-function cssAdaptator(resolutions){
+function cssAdaptator(){
   $(".images").css("visibility", "visible");
-  $(".image").css("width", resolutions );
-  $(".image img").css("width", resolutions);
-  var option;
-  if(resolutions === "108"){
-    option = 0;
-    $(".image").css("height", 81 );
-    $(".image img").css("height", 81);
-  }
-  else if(resolutions === "216"){
-    option = 1;
-    $(".image").css("height", 162 );
-    $(".image img").css("height", 162);
-  }
-  else if(resolutions === "320"){
-    option = 2;
-    $(".image").css("height", 240 );
-    $(".image img").css("height", 240);
-  }
-  else if(resolutions === "640"){
-    option = 3;
-    $(".image").css("height", 480 );
-    $(".image img").css("height", 480);
-  }
-  else if(resolutions === "960"){
-    option = 4;
-    $(".image").css("height", 720 );
-    $(".image img").css("height", 720);
-  }
-  else if(resolutions === "1080"){
-    option = 5;
-    $(".image").css("height", 810 );
-    $(".image img").css("height", 810);
-  }
-  return option;
 }
-/*
-$.ajax({
-    url: "http://www.reddit.com/comments/1gtyui/.json?limit=100&sort=top",
-    dataType: "jsonp",
-    jsonp: 'jsonp',
-    success: function(data) {
-    ... do stuff here ....
-    }
-});
-
-
-
-<div class="image" id="img1">
-  <img src="http://i.imgur.com/Nn1Vcnw.jpg" alt="Titre image"/>
-  <span>Une belle description</span>
-</div>
-*/
