@@ -17,7 +17,7 @@ function scrollToAnchor(aid){
 };
 function searchAndPrint(filter,resolutions, subreddit){
   if(subreddit !=""){
-    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
+    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=60";
   }
   else{
     redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=30";
@@ -37,7 +37,7 @@ function searchAndPrint(filter,resolutions, subreddit){
 function printPics(data,resolutions){
   option = resolutions;
   cssAdaptator();
-  for(i = 0;i<100;i++){
+  for(i = 0;i<50;i++){
     preview = data.data.children[i].data.preview;
     image = data.data.children[i].data.preview.images[0].resolutions[option];
     title = data.data.children[i].data.title;

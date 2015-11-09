@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Kalam);
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
 body{
 
@@ -62,8 +62,8 @@ h1{
 span{
   position: absolute;
   color: black;
-  font-family: 'Amatic SC', cursive;
-  font-size: 25px;
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 22px;
   left: 0px;
   width: 100%;
   bottom: 0px;
@@ -203,6 +203,12 @@ span{
 }
 .dropdown select:hover{
 
+}
+footer{
+  text-align: center;
+}
+footer a{
+  color: rgba(24,149,215,1);
 }
 
 @media (max-width: 500px) {
