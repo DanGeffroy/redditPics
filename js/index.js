@@ -4,11 +4,9 @@ $(document).ready(function(){
 
   $("#button").click(function() {
     $(".images").empty();
-    console.log("ici");
     resolutions = $("#resolutions").val();
     filter = $("#filter").val();
     subreddit = $("#subreddit").val();
-    console.log(resolutions + filter + subreddit);
     searchAndPrint(filter,resolutions, subreddit);
     scrollToAnchor('anchor');
   });
@@ -28,7 +26,6 @@ function searchAndPrint(filter,resolutions, subreddit){
     url: redditUrl,
     dataType: "json",
     error: function(){
-      console.log("fail");
       $("#subreddit").val("This subReddit doesn't exist :S");
     },
     jsonp: 'jsonp',
