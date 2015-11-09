@@ -36,47 +36,105 @@ h1{
   padding-left: 5px;
   padding-right :5px;
 
-  -moz-column-count:5;
--moz-column-gap: 5%;
--moz-column-width: 50%;
--webkit-column-count:5;
--webkit-column-gap: 5%;
--webkit-column-width: 50%;
-column-count: 5;
-column-gap: 5%;
-column-width: 50%;
 
-  display: block;
+   overflow: hidden;
+   margin : 2px;
+   display: inline-block;
+   position:relative
 }/*
 div{
   border: 1px solid black ;
 }*/
+.tourImg{
+  background-color: white;
+    display: inline-block;
+    overflow: hidden;
+   position:relative;
+   margin :10px;
+   padding-bottom: 50px;
+}
 
+span{
+  position: absolute;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+left: 0px;
+width: 100%;
+bottom: 0px;
+padding: 5px 5px;
+padding-bottom: 15px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+box-sizing: border-box;
+
+}
 .image {
   /*  width: 216px;*/
   /*  height: 162px;*/
   /*  */
-width: 100%;
-  background-color: white;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
+  margin: 10px;
     background-color: white;
-    /*display: inline-block;*/
-  /*  position:relative*/
-
-
+    overflow: hidden;
+   position:relative
 }
-.imgcropper{
+.image img:hover{
+  width: 103%;
+}
+
+.imgSizeLon0{
+  width: 181px;
+}
+.imgSizeLon1{
+  width: 216px;
+   transition:width .4s;
+}
+.imgSizeLon2{
+  width: 320px;
+  transition:width .4s;
+}
+.imgSizeLon3{
+  width: 640px;
+  transition:width .4s;
+}
+.imgSizeLon4{
+  width: 960px;
+  transition:width .4s;
+}
+.imgSizeLon5{
+  width: 1080px;
+  transition:width .4s;
+}
+
+.imgSizeLar0{
+
+   height: 81px;
+}
+.imgSizeLar1{
+
+   height: 162px;
+}
+.imgSizeLar2{
+
+   height: 240px;
+}
+.imgSizeLar3{
+
+ height: 480px;
+}
+.imgSizeLar4{
+
+  height: 720px;
+}
+.imgSizeLar5{
+
+  height: 810px;
+}
+
+.image img{
   overflow: hidden;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-
-}
-
-.imgcropper img{
-  width: 100%;
+  marign : 2px;
 }
 
 .form{
@@ -133,11 +191,7 @@ width: 100%;
 	font-weight: bold;
   font-size: 17px;
 }
-span{
-color: black;
-font-family: 'Amatic SC', cursive;
-font-size: 25px;
-}
+
 .dropdown select {
         border:#1895D7 1px solid;
     /*  border: 0 !important; */ /*Removes border*/
