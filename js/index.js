@@ -2,14 +2,6 @@ $(document).ready(function(){
 
   searchAndPrint("hot","2","pics");
 
-
-
-
-
-
-
-
-
   $("#button").click(function() {
     $(".images").empty();
     console.log("ici");
@@ -22,39 +14,39 @@ $(document).ready(function(){
   });
 });
 function scrollToAnchor(aid){
-    var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  var aTag = $("a[name='"+ aid +"']");
+  $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 };
 function searchAndPrint(filter,resolutions, subreddit){
   if(subreddit !=""){
-      redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
+    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
   }
   else{
-      redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=30";
+    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=30";
   }
   $.ajax({
     url: redditUrl,
     dataType: "json",
     error: function(){
       console.log("fail");
-        $("#subreddit").val("This subReddit doesn't exist :S");
+      $("#subreddit").val("This subReddit doesn't exist :S");
     },
     jsonp: 'jsonp',
     success: function(data) {
-    console.log(data);
-
-    printPics(data,resolutions);
-  }
+      printPics(data,resolutions);
+    }
   });
-}
+};
 function printPics(data,resolutions){
   option = resolutions;
   cssAdaptator();
   for(i = 0;i<100;i++){
-  /*  console.log("<div class='image' id='img1'><img src='"+data.data.children[i].data.preview.images[0].resolutions[1]+"' alt='"+data.data.children[i].data.title+"'/><span>"+data.data.children[i].data.title+"</span></div>");*/
-  if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
-    $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+data.data.children[i].data.preview.images[0].resolutions[option].url+"'><img class='imgSizeLon"+option+ "' src='"+data.data.children[i].data.preview.images[0].resolutions[option].url+"' alt='"+data.data.children[i].data.title+"'/></a></div><span>"+data.data.children[i].data.title+"</span></div>");
-  }
+    preview = data.data.children[i].data.preview;
+    image = data.data.children[i].data.preview.images[0].resolutions[option];
+    title = data.data.children[i].data.title;
+    if((preview != "undefined")&&(typeof image != "undefined")){
+      $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+image.url+"'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><span>"+title+"</span></div>");
+    }
   }
 };
 

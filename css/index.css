@@ -37,21 +37,18 @@ h1{
   padding-right :5px;
 
 
-   overflow: hidden;
-   margin : 2px;
-   display: inline-block;
-   position:relative
-}/*
-div{
-  border: 1px solid black ;
-}*/
+  overflow: hidden;
+  margin : 2px;
+  display: inline-block;
+  position:relative
+}
 .tourImg{
   background-color: white;
-    display: inline-block;
-    overflow: hidden;
-   position:relative;
-   margin :10px;
-   padding-bottom: 50px;
+  display: inline-block;
+  overflow: hidden;
+  position:relative;
+  margin :10px;
+  padding-bottom: 50px;
 }
 
 span{
@@ -59,36 +56,33 @@ span{
   color: black;
   font-family: 'Amatic SC', cursive;
   font-size: 25px;
-left: 0px;
-width: 100%;
-bottom: 0px;
-padding: 5px 5px;
-padding-bottom: 15px;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-box-sizing: border-box;
+  left: 0px;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px 5px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 
 }
 .image {
-  /*  width: 216px;*/
-  /*  height: 162px;*/
-  /*  */
   margin: 10px;
-    background-color: white;
-    overflow: hidden;
-   position:relative
+  background-color: white;
+  overflow: hidden;
+  position:relative
 }
 .image img:hover{
   width: 103%;
 }
-
 .imgSizeLon0{
   width: 181px;
+  transition:width .4s;
 }
 .imgSizeLon1{
   width: 216px;
-   transition:width .4s;
+  transition:width .4s;
 }
 .imgSizeLon2{
   width: 320px;
@@ -108,20 +102,16 @@ box-sizing: border-box;
 }
 
 .imgSizeLar0{
-
-   height: 81px;
+  height: 81px;
 }
 .imgSizeLar1{
-
-   height: 162px;
+  height: 162px;
 }
 .imgSizeLar2{
-
-   height: 240px;
+  height: 240px;
 }
 .imgSizeLar3{
-
- height: 480px;
+  height: 480px;
 }
 .imgSizeLar4{
 
@@ -134,7 +124,6 @@ box-sizing: border-box;
 
 .image img{
   overflow: hidden;
-  marign : 2px;
 }
 
 .form{
@@ -152,8 +141,8 @@ box-sizing: border-box;
 
 .textbox:focus{
   outline:none;
-   border:#1895D7 2px solid;
-   color:#1895D7;
+  border:#1895D7 2px solid;
+  color:#1895D7;
 }
 
 .button{
@@ -176,7 +165,7 @@ box-sizing: border-box;
   background: url("../img/fuse.png");
   background-repeat: no-repeat;
   background-position: center;
-    border:#1895D7 2px solid;
+  border:#1895D7 2px solid;
 
 }
 .dropdown{
@@ -187,24 +176,22 @@ box-sizing: border-box;
 }
 .dropdown p {
   padding-top:0px;
-	display: inline-block;
-	font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
   font-size: 17px;
 }
 
 .dropdown select {
-        border:#1895D7 1px solid;
-    /*  border: 0 !important; */ /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('../img/arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 83px 4px;  /*Position of the background-image*/
-      width: 100px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
+  border:#1895D7 1px solid;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../img/arrow.png') no-repeat;
+  background-position: 83px 4px;
+  width: 100px;
+  text-indent: 0.01px;
+  text-overflow: "";
 
-      /*My custom style for fonts*/
-      color: #1455a2;
+  color: #1455a2;
 }
 .dropdown select:hover{
 
@@ -218,7 +205,7 @@ box-sizing: border-box;
     padding-right: 0px;
     padding-top: 0px;
     position:fixed;
-      z-index: 3;
+    z-index: 3;
   }
   h1{
     padding-top: 0px;
@@ -230,18 +217,24 @@ box-sizing: border-box;
 
   }
   span{
-    font-size: 15px;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .images{
+    margin-top: 250px;
   }
   .textbox{
     height:30px;
 
   }
   .button{
-
     height:30px;
     border : 2px;
     font-size: 10pt;
-
+  }
+  .tourImg{
+    margin : 2px;
+    padding-bottom: 30px;
   }
 
 }
