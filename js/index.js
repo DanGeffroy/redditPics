@@ -22,12 +22,12 @@ function loadPage(){
   scrollToAnchor('anchor');
 }
 function scrollToAnchor(aid){
-  var aTag = $("a[name='"+ aid +"']");
+  var aTag = $("a[id='"+ aid +"']");
   $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 };
 function searchAndPrint(filter,resolutions, subreddit){
   if(subreddit !=""){
-    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=60";
+    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
   }
   else{
     redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=60";
@@ -47,11 +47,11 @@ function searchAndPrint(filter,resolutions, subreddit){
 function printPics(data,resolutions){
   option = resolutions;
   cssAdaptator();
-  for(i = 0;i<50;i++){
-    preview = data.data.children[i].data.preview;
-    image = data.data.children[i].data.preview.images[0].resolutions[option];
-    title = data.data.children[i].data.title;
-    if((preview != "undefined")&&(typeof image != "undefined")){
+  for(i = 0;i<100;i++){
+    if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
+      preview = data.data.children[i].data.preview;
+      image = data.data.children[i].data.preview.images[0].resolutions[option];
+      title = data.data.children[i].data.title;
       $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+image.url+"'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><span>"+title+"</span></div>");
     }
   }

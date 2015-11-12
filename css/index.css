@@ -20,8 +20,8 @@ h1{
   padding-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
   background-color: white;
   border-radius:5px;
 
@@ -211,15 +211,16 @@ footer a{
   color: rgba(24,149,215,1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .input{
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-    position:fixed;
+    position: fixed;
     z-index: 3;
+    margin-left: 5%;
+    width: 85%;
+  }
+  .form{
+    padding: 5px;
+    margin-bottom: 5px;
   }
   h1{
     padding-top: 0px;
@@ -228,18 +229,16 @@ footer a{
   }
   #logo{
     width: 60px;
-
   }
   span{
     font-size: 20px;
     padding-bottom: 10px;
   }
   .images{
-    margin-top: 250px;
+    margin-top: 220px;
   }
   .textbox{
     height:30px;
-
   }
   .button{
     height:30px;
