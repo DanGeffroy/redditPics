@@ -3,14 +3,24 @@ $(document).ready(function(){
   searchAndPrint("hot","2","pics");
 
   $("#button").click(function() {
-    $(".images").empty();
-    resolutions = $("#resolutions").val();
-    filter = $("#filter").val();
-    subreddit = $("#subreddit").val();
-    searchAndPrint(filter,resolutions, subreddit);
-    scrollToAnchor('anchor');
+    loadPage();
+  });
+  $("#filter").change(function() {
+    loadPage();
+  });
+  $("#resolutions").change(function() {
+    loadPage();
   });
 });
+
+function loadPage(){
+  $(".images").empty();
+  resolutions = $("#resolutions").val();
+  filter = $("#filter").val();
+  subreddit = $("#subreddit").val();
+  searchAndPrint(filter,resolutions, subreddit);
+  scrollToAnchor('anchor');
+}
 function scrollToAnchor(aid){
   var aTag = $("a[name='"+ aid +"']");
   $('html,body').animate({scrollTop: aTag.offset().top},'slow');
@@ -20,7 +30,7 @@ function searchAndPrint(filter,resolutions, subreddit){
     redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=60";
   }
   else{
-    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=30";
+    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=60";
   }
   $.ajax({
     url: redditUrl,
