@@ -30,7 +30,7 @@ function searchAndPrint(filter,resolutions, subreddit){
     redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
   }
   else{
-    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=60";
+    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=100";
   }
   $.ajax({
     url: redditUrl,

@@ -55,8 +55,22 @@ h1{
   padding-bottom: 50px;
 
   -webkit-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.57);
-    box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.57);
+  box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.57);
+
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+.tourImg:hover{
+  z-index: 3;
+  -moz-transform: rotate(5deg) scale(1.12);
+  -webkit-transform: rotate(5deg) scale(1.12);
+  -o-transform: rotate(5deg) scale(1.12);
+  -ms-transform: rotate(5deg) scale(1.12);
+  transform: rotate(5deg) scale(1.12);
 }
 
 span{
@@ -79,34 +93,25 @@ span{
   margin: 10px;
   background-color: white;
   overflow: hidden;
-  position:relative
-}
-.image img:hover{
-  width: 103%;
+  position:relative;
 }
 .imgSizeLon0{
   width: 181px;
-  transition:width .4s;
 }
 .imgSizeLon1{
   width: 216px;
-  transition:width .4s;
 }
 .imgSizeLon2{
   width: 320px;
-  transition:width .4s;
 }
 .imgSizeLon3{
   width: 640px;
-  transition:width .4s;
 }
 .imgSizeLon4{
   width: 960px;
-  transition:width .4s;
 }
 .imgSizeLon5{
   width: 1080px;
-  transition:width .4s;
 }
 
 .imgSizeLar0{
