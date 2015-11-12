@@ -10,5 +10,5 @@ A simple webpage to browse reddit/pics.
 > basically this is an homework i have to do
 
 # "Jobs done"
-<p>Here is a previous off the result : </p>
+<p>Here is a preview of the result : </p>
 <p align="center"><img src="http://i.imgur.com/stPXyfp.png"></p>
