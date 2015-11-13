@@ -12,3 +12,14 @@ A simple webpage to browse reddit/pics.
 # "Jobs done"
 <p>Here is a preview of the result : </p>
 <p align="center"><img src="http://i.imgur.com/stPXyfp.png"></p>
+
+# How to use it ?
+<p>For an offline demo just open in your web browser the file : <b>interface.html</b></p>
+<p>For an online demo (with connexion to the reddit api) just open in your web browser the file : <b>app.html</b></p>
+<p>In the online version you can:
+<ul>
+  <li> enter a subreddit</li>
+  <li>choose a sort methode</li>
+  <li>choose the resolution you want</li>
+</ul>
+</p>
