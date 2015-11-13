@@ -46,7 +46,6 @@ function searchAndPrint(filter,resolutions, subreddit){
 };
 function printPics(data,resolutions){
   option = resolutions;
-  cssAdaptator();
   for(i = 0;i<100;i++){
     if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
       preview = data.data.children[i].data.preview;
@@ -56,7 +55,3 @@ function printPics(data,resolutions){
     }
   }
 };
-
-function cssAdaptator(){
-  $(".images").css("visibility", "visible");
-}
