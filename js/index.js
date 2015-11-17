@@ -11,6 +11,12 @@ $(document).ready(function(){
   $("#resolutions").change(function() {
     loadPage();
   });
+  $("#subreddit").keypress(function(e) {
+    if(e.which==13){
+        loadPage();
+        return false;
+    }
+  });
 });
 
 function loadPage(){
