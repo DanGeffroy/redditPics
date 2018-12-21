@@ -51,13 +51,16 @@ function searchAndPrint(filter,resolutions, subreddit){
   });
 };
 function printPics(data,resolutions){
+  
   option = resolutions;
   for(i = 0;i<100;i++){
+    console.log(data.data.children[i])
     if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
       preview = data.data.children[i].data.preview;
       image = data.data.children[i].data.preview.images[0].resolutions[option];
       title = data.data.children[i].data.title;
-      $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+image.url+"'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><span>"+title+"</span></div>");
+      permalink = "https://www.reddit.com" + data.data.children[i].data.permalink
+      $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+image.url+"'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><a href='"+permalink+"' target='_blank'><span>"+title+"</span></a></div>");
     }
   }
 };
