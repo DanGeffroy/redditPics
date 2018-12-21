@@ -88,6 +88,9 @@ span{
   box-sizing: border-box;
 
 }
+span:hover{
+    text-decoration: underline;
+}
 .image {
   margin: 10px;
   background-color: white;
