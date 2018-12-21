@@ -60,7 +60,7 @@ function printPics(data,resolutions){
       image = data.data.children[i].data.preview.images[0].resolutions[option];
       title = data.data.children[i].data.title;
       permalink = "https://www.reddit.com" + data.data.children[i].data.permalink
-      $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+image.url+"'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><a href='"+permalink+"' target='_blank'><span>"+title+"</span></a></div>");
+      $(".images").append("<div class='tourImg'><div class='image imgSizeLon"+option+" imgSizeLar"+option+"' id='img" + i+"'><a href='"+permalink+"' target='_blank'><img class='imgSizeLon"+option+ "' src='"+image.url+"' alt='"+title+"'/></a></div><a href='"+permalink+"' target='_blank'><span>"+title+"</span></a></div>");
     }
   }
 };
