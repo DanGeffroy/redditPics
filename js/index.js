@@ -4,12 +4,15 @@ $(document).ready(function(){
   searchAndPrint("hot","2","pics");
 
   $("#button").click(function() {
+    after = "";
     loadPage();
   });
   $("#filter").change(function() {
+    after = "";
     loadPage();
   });
   $("#resolutions").change(function() {
+    after = "";
     loadPage();
   });
   $("#next-button").click(function() {
@@ -17,6 +20,7 @@ $(document).ready(function(){
   });
   $("#subreddit").keypress(function(e) {
     if(e.which==13){
+        after = "";
         loadPage();
         return false;
     }
