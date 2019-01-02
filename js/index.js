@@ -1,3 +1,4 @@
+var after = "";
 $(document).ready(function(){
 
   searchAndPrint("hot","2","pics");
@@ -9,6 +10,9 @@ $(document).ready(function(){
     loadPage();
   });
   $("#resolutions").change(function() {
+    loadPage();
+  });
+  $("#next-button").click(function() {
     loadPage();
   });
   $("#subreddit").keypress(function(e) {
@@ -33,10 +37,10 @@ function scrollToAnchor(aid){
 };
 function searchAndPrint(filter,resolutions, subreddit){
   if(subreddit !=""){
-    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100";
+    redditUrl = "https://www.reddit.com/r/"+subreddit+"/"+filter+"/.json?limit=100&after="+after;
   }
   else{
-    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=100";
+    redditUrl = "https://www.reddit.com/r/pics/"+filter+"/.json?limit=100&after="+after;
   }
   $.ajax({
     url: redditUrl,
@@ -53,8 +57,9 @@ function searchAndPrint(filter,resolutions, subreddit){
 function printPics(data,resolutions){
   
   option = resolutions;
+  after = data.data.after
+  console.log(after)
   for(i = 0;i<100;i++){
-    console.log(data.data.children[i])
     if((typeof data.data.children[i].data.preview != "undefined")&&(typeof data.data.children[i].data.preview.images[0].resolutions[option] != "undefined")){
       preview = data.data.children[i].data.preview;
       image = data.data.children[i].data.preview.images[0].resolutions[option];
